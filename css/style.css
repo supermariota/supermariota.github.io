@@ -45,6 +45,18 @@ h2 {
 	line-height: 54px;
 }
 
+h3 {
+	font-size: 14px;
+	color: #666;
+	margin: 10px 0;
+	letter-spacing: 0px;
+	font-weight: 600;
+}
+
+h3 a {
+	color: #1BD046;
+}
+
 .headline {
 	margin-top: 200px;
 	margin-bottom: 100px;

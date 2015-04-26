@@ -63,7 +63,7 @@ h3 a {
 }
 
 .bottom {
-	margin-top: 100px;
+	margin-top: 120px;
 	margin-bottom: 100px;
 }
 
@@ -92,11 +92,11 @@ h3 a {
 	margin-top: 40px;
 }
 .character {
-	margin-top: 40px;
-	margin-bottom: 20px;
+	margin-top: 70px;
+	margin-bottom: 10px;
 }
 
 .image {
-	height: 400px;
+	height: 350px;
 	margin-left: 10%;
 }

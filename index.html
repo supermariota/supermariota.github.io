@@ -17,15 +17,23 @@
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
+      <script type="text/javascript">
+      !function(){var analytics=window.analytics=window.analytics||[];if(!analytics.initialize)if(analytics.invoked)window.console&&console.error&&console.error("Segment snippet included twice.");else{analytics.invoked=!0;analytics.methods=["trackSubmit","trackClick","trackLink","trackForm","pageview","identify","group","track","ready","alias","page","once","off","on"];analytics.factory=function(t){return function(){var e=Array.prototype.slice.call(arguments);e.unshift(t);analytics.push(e);return analytics}};for(var t=0;t<analytics.methods.length;t++){var e=analytics.methods[t];analytics[e]=analytics.factory(e)}analytics.load=function(t){var e=document.createElement("script");e.type="text/javascript";e.async=!0;e.src=("https:"===document.location.protocol?"https://":"http://")+"cdn.segment.com/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(e,n)};analytics.SNIPPET_VERSION="3.0.1";
+      analytics.load("zoMhymBrqoGyQPUdrtQodJhudhWp8IiB");
+      analytics.page()
+      }}();
+
+    </script>
   </head>
   <body>
+    <div class="container-fluid">
     <div class="row bg">
-    	<div class="col-md-6 character">
+    	<div class="col-md-5 character center hidden-xs hidden-sm">
     		<img class="image" src="img/mariota.png">
     	</div>
-    	<div class="col-md-6 headline">
+    	<div class="col-md-6 col-md-offset-1 headline">
 	    		<h1>Super Mariota</h1>
-	    		<h2>A new iOS game for<br> the true fans</h2>
+	    		<h2>A new iOS game for the true fans</h2>
 	    	<div class="top">
 	    		<a class="button" href="#">Download for Iphone</a>
 	    	</div>	
@@ -34,7 +42,7 @@
     </div>
         <div class="row iphone">
             <div class="col-md-12 center">
-              <video width="70%" height="" class="" autoplay loop> //EDIT: loop="true" and  autoplay="autoplay" are deprecated
+              <video width="80%" height="" class="" autoplay loop> //EDIT: loop="true" and  autoplay="autoplay" are deprecated
                 <source src="img/supermariota.mp4" type="video/mp4" />
                 <source src="movie.ogg" type="video/ogg" />
                 Your browser does not support the video tag.
@@ -44,16 +52,30 @@
 
 
 	<div class="row bg">
-    	<div class="col-md-6 col-md-offset-3 bottom center">
+    	<div class="col-md-8 col-md-offset-2 bottom center">
 	    		<h2>Start playing for free today.</h2>
 	    	<div class="top">
 	    		<a class="button" href="#">Download for Iphone</a>
 	    	</div>	
     	</div>
 	</div>
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="js/bootstrap.min.js"></script>
+    </div>
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+       <!-- Include all compiled plugins (below), or include individual files as needed -->
+       <script src="js/bootstrap.min.js"></script>
+       <script type="text/javascript">
+
+         var link = document.getElementById('download1');
+
+           analytics.trackLink(link, 'Download Clicked', {
+             button: '1'
+           });
+
+           var link1 = document.getElementById('download2');
+
+           analytics.trackLink(link1, 'Download Clicked', {
+             button: '2'
+           });
+       </script>
   </body>
 </html>

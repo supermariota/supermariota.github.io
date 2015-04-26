@@ -1,8 +1,8 @@
 .bg {
-	background-image: -o-linear-gradient(-78deg, #21D384 2%, #58FB9A 99%);
-	background-image: -moz-linear-gradient(-78deg, #21D384 2%, #58FB9A 99%);
-	background-image: -ms-linear-gradient(-78deg, #21D384 2%, #58FB9A 99%);
-	background-image: linear-gradient(-168deg, #21D384 2%, #58FB9A 99%);
+	background-image: -o-linear-gradient(-78deg, #1BD046 2%, #58FB9A 99%);
+	background-image: -moz-linear-gradient(-78deg, #1BD046 2%, #58FB9A 99%);
+	background-image: -ms-linear-gradient(-78deg, #1BD046 2%, #58FB9A 99%);
+	background-image: linear-gradient(-168deg, #1BD046 2%, #58FB9A 99%);
 }
 body {
 	font-family: Source Sans Pro;
@@ -46,8 +46,8 @@ h2 {
 }
 
 .headline {
-	margin-top: 250px;
-	margin-bottom: 200px;
+	margin-top: 200px;
+	margin-bottom: 100px;
 }
 
 .bottom {
@@ -86,4 +86,5 @@ h2 {
 .image {
 	height: 500px;
 	margin-left: 10%;
+	margin-bottom: 20px;
 }

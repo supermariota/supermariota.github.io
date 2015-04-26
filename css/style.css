@@ -80,11 +80,11 @@ h2 {
 	margin-top: 40px;
 }
 .character {
-	margin-top: 100px;
+	margin-top: 40px;
+	margin-bottom: 20px;
 }
 
 .image {
-	height: 500px;
+	height: 400px;
 	margin-left: 10%;
-	margin-bottom: 20px;
 }

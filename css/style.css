@@ -19,12 +19,13 @@ body {
 	line-height: 15px;
 	text-transform: uppercase;
 	padding: 10px 20px;
-	width: 300px;
+	width: 250px;
 	font-size: 14px;
 	font-weight: 600;
 	letter-spacing: 1px;
 	margin-right: 10px;
 	margin-bottom: 40px;
+	line-height: 18px;
 }
 
 .iphone {
@@ -53,6 +54,7 @@ h1 {
 	font-weight: 700;
 	color: #FFFFFF;
 	line-height: 10px;
+	margin: 0;
 }
 
 h2 {
@@ -80,9 +82,12 @@ h3 a {
 	margin-bottom: 100px;
 }
 
-.bottom {
+.top-margin {
 	margin-top: 100px;
-	margin-bottom: 100px;
+}
+
+.bottom-margin {
+	margin-bottom: 70px;
 }
 
 .center {
@@ -99,6 +104,23 @@ h3 a {
 	font-size: 14px;
 	font-weight: 600;
 	letter-spacing: 1px;
+}
+
+.circle-button {
+	border-radius: 40px;
+	border: 2px solid #FFFFFF;
+	color: #FFFFFF;
+	line-height: 15px;
+	text-transform: uppercase;
+	padding: 10px 12px;
+	font-size: 14px;
+	font-weight: 600;
+	letter-spacing: 1px;
+}
+
+.circle-button:hover {
+	background-color: rgba(250, 250, 250, 0.3);
+	color: #fff;
 }
 
 .button:hover {

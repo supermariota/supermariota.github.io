@@ -39,18 +39,6 @@
       });
       }}();
 
-
-      function signMeUp(){
-            var input = document.getElementById("signUp");
-
-
-            analytics.identify({
-              email: input.value
-            });
-
-            input.value = "Thanks!";
-      }
-
     </script>
   </head>
   <body>
@@ -97,6 +85,21 @@
        <!-- Include all compiled plugins (below), or include individual files as needed -->
        <script src="js/bootstrap.min.js"></script>
        <script type="text/javascript">
+
+        function signMeUp(){
+              var input = document.getElementById("signUp");
+
+              var e = input.value;
+              if(e != "Thanks!" && e != ""){
+                analytics.identify({
+                  userId: e,
+                  email: e
+                });
+                input.value = "Thanks!";
+              }
+
+                         
+        }
 
         var ref = '';
         if (document.referrer) {

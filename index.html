@@ -18,9 +18,23 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
       <script type="text/javascript">
+          function getParameter(theParameter) { 
+            var params = window.location.search.substr(1).split('&');
+           
+            for (var i = 0; i < params.length; i++) {
+              var p=params[i].split('=');
+              if (p[0] == theParameter) {
+                return decodeURIComponent(p[1]);
+              }
+            }
+            return false;
+          }
+
       !function(){var analytics=window.analytics=window.analytics||[];if(!analytics.initialize)if(analytics.invoked)window.console&&console.error&&console.error("Segment snippet included twice.");else{analytics.invoked=!0;analytics.methods=["trackSubmit","trackClick","trackLink","trackForm","pageview","identify","group","track","ready","alias","page","once","off","on"];analytics.factory=function(t){return function(){var e=Array.prototype.slice.call(arguments);e.unshift(t);analytics.push(e);return analytics}};for(var t=0;t<analytics.methods.length;t++){var e=analytics.methods[t];analytics[e]=analytics.factory(e)}analytics.load=function(t){var e=document.createElement("script");e.type="text/javascript";e.async=!0;e.src=("https:"===document.location.protocol?"https://":"http://")+"cdn.segment.com/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(e,n)};analytics.SNIPPET_VERSION="3.0.1";
       analytics.load("zoMhymBrqoGyQPUdrtQodJhudhWp8IiB");
-      analytics.page()
+      analytics.page('Home', {
+        source: getParameter("src")
+      });
       }}();
 
     </script>
@@ -36,13 +50,14 @@
 	    		<h2>A new iOS game for the true fans.</h2>
 	    	<div class="top">
           <a class="button" href="#">Coming soon for iPhone</a>
+	    		<a id="download1" class="button" href="#">Coming soon for iPhone</a>
 	    	</div>	
     	</div>
     	
     </div>
         <div class="row iphone">
             <div class="col-md-12 center">
-              <video width="80%" height="" class="" autoplay loop> //EDIT: loop="true" and  autoplay="autoplay" are deprecated
+              <video width="80%" height="" class="" autoplay loop>
                 <source src="img/supermariota.mp4" type="video/mp4" />
                 <source src="movie.ogg" type="video/ogg" />
                 Your browser does not support the video tag.
@@ -56,6 +71,7 @@
     	    		<h2>Get notified when we're live</h2>
     	    	<div class="top">
     	    		<input class="type" ="text" name="firstname"><a class="button" href="#">Sign me up</a>
+    	    		<a id="download2" class="button" href="#">Coming soon for iPhone</a>
     	    	</div>
         	</div>
     </div>
@@ -70,16 +86,25 @@
        <script src="js/bootstrap.min.js"></script>
        <script type="text/javascript">
 
+        var ref = '';
+        if (document.referrer) {
+          ref = document.referrer.match(/:\/\/(.[^/]+)/)[1];
+        }
+
          var link = document.getElementById('download1');
 
            analytics.trackLink(link, 'Download Clicked', {
-             button: '1'
+             button: '1',
+             source: getParameter("src"),
+             referrer: ref
            });
 
            var link1 = document.getElementById('download2');
 
            analytics.trackLink(link1, 'Download Clicked', {
-             button: '2'
+             button: '2',
+             source: getParameter("src"),
+             referrer: ref
            });
        </script>
   </body>

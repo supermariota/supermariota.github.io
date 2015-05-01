@@ -94,8 +94,7 @@
 
               var e = input.value;
               if(e != "Thanks!" && e != ""){
-                analytics.identify({
-                  userId: e,
+                analytics.track('Signed Up Email', {
                   email: e
                 });
                 input.value = "Thanks!";
